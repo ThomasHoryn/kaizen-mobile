@@ -9,6 +9,23 @@ $background-color-light: #edf0f1;
   background-color: $background-color-light;
 }
 
+#app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 30px 0;
+  background-color: $background-color-light;
+  transition:
+    padding 1s ease-in-out,
+    border-bottom 1s ease-in-out; /* Adjust transition timing and easing */
+}
+
+#app-header.header-scrolled {
+  padding: 15px 0; /* Adjust padding to reduce size */
+  border-bottom: 1px solid black; /* Add bottom border */
+  opacity: 0.9;
+}
+
 /* ==============================================================
 Bootstrap tweaks
 ===============================================================*/

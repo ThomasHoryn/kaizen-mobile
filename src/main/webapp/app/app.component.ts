@@ -25,4 +25,20 @@ export default defineComponent({
       t$: useI18n().t,
     };
   },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const header = document.getElementById('app-header');
+      if (window.scrollY > 50) {
+        header?.classList.add('header-scrolled');
+      } else {
+        header?.classList.remove('header-scrolled');
+      }
+    },
+  },
 });
