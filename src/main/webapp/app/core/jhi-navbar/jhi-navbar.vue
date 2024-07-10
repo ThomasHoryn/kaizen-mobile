@@ -1,5 +1,5 @@
 <template>
-  <b-navbar data-cy="navbar" toggleable="md" type="light" class="bg-light">
+  <b-navbar data-cy="navbar" toggleable="md" type="light" class="mk-bg-light">
     <b-navbar-brand class="logo" b-link to="/">
       <span class="logo-img"></span>
       <span v-text="t$('global.title')" class="navbar-title"></span> <span class="navbar-version">{{ version }}</span>
@@ -140,6 +140,9 @@
 /* ==========================================================================
     Navbar
     ========================================================================== */
+.mk-bg-light {
+  background-color: #edf0f1;
+}
 .navbar-version {
   font-size: 0.65em;
 }
