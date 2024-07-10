@@ -1,4 +1,13 @@
 @import 'bootstrap-variables';
+/* ==============================================================
+Custom styles for kaizen mobile app
+===============================================================*/
+
+$background-color-light: #edf0f1;
+
+.mk-bg-light {
+  background-color: $background-color-light;
+}
 
 /* ==============================================================
 Bootstrap tweaks
@@ -100,7 +109,7 @@ Generic styles
   padding: 1.5%;
   margin-top: 20px;
   border: none;
-  background: inherit;
+  background-color: $background-color-light;
 }
 
 .error {
