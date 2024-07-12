@@ -18,15 +18,22 @@ nav li.router-link-active .navbar-dropdown-menu {
 
 // Custom color name as SCSS variable
 $deep-space-sparkle: #121333;
+$umbry: #644f45;
 $background-color-light: #edf0f1;
 
 // Assigning custom color to Bootstrap variables
 $primary: $deep-space-sparkle;
+$secondary: $umbry;
+
 $body-color: $background-color-light;
 $font-size-sm: 1.2rem;
 
 .km-primary {
   color: $deep-space-sparkle;
+}
+
+.km-secondary {
+  color: $umbry;
 }
 
 .btn-primary {

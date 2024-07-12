@@ -17,7 +17,7 @@
     </b-navbar-toggle>
 
     <b-collapse is-nav id="header-tabs">
-      <b-navbar-nav class="ml-auto">
+      <b-navbar-nav class="km-navbar">
         <b-nav-item to="/" exact>
           <span>
             <span v-text="t$('global.menu.home')"></span>
@@ -138,6 +138,9 @@
 /* ==========================================================================
     Navbar
     ========================================================================== */
+.km-navbar {
+  margin-left: 10px;
+}
 .navbar-version {
   font-size: 0.5em;
 }
