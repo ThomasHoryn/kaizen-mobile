@@ -18,34 +18,41 @@ nav li.router-link-active .navbar-dropdown-menu {
 
 // Custom color name as SCSS variable
 $deep-space-sparkle: #121333;
+$free-speech-blue: #464acd;
 $umbry: #644f45;
 $background-color-light: #edf0f1;
 
 // Assigning custom color to Bootstrap variables
 $primary: $deep-space-sparkle;
-$secondary: $umbry;
+$secondary: $free-speech-blue;
 
 $body-color: $background-color-light;
 $font-size-sm: 1.2rem;
 
 .km-primary {
-  color: $deep-space-sparkle;
+  color: $primary;
 }
 
 .km-secondary {
-  color: $umbry;
+  color: $secondary;
 }
 
 .nav-link {
   color: $deep-space-sparkle !important;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-link:hover {
-  color: $umbry !important;
+  color: $secondary !important;
+  border-bottom: 2px solid $secondary;
+}
+nav li.router-link-active {
+  color: $secondary !important;
+  border-bottom: 2px solid $secondary;
 }
 
 nav li.router-link-active .navbar-dropdown-menu {
-  color: $umbry !important;
+  color: $secondary !important;
 }
 
 .btn-primary {
