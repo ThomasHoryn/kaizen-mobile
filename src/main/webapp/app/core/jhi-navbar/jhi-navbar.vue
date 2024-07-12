@@ -2,7 +2,7 @@
   <b-navbar data-cy="navbar" toggleable="md" type="light">
     <b-navbar-brand class="logo" b-link to="/">
       <span class="logo-img"></span>
-      <span v-text="t$('global.title')" class="navbar-title"></span> <span class="navbar-version">{{ version }}</span>
+      <span v-text="t$('global.title')" class="navbar-title km-primary"></span> <span class="navbar-version km-primary">{{ version }}</span>
     </b-navbar-brand>
     <b-navbar-toggle
       right
@@ -140,7 +140,6 @@
     ========================================================================== */
 .navbar-version {
   font-size: 0.5em;
-  color: #121333;
 }
 
 @media screen and (min-width: 768px) {
@@ -157,7 +156,6 @@
 
 .navbar-title {
   display: inline-block;
-  color: #121333;
 }
 
 /* ==========================================================================

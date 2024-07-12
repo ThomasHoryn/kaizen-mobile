@@ -25,6 +25,10 @@ $primary: $deep-space-sparkle;
 $body-color: $background-color-light;
 $font-size-sm: 1.2rem;
 
+.km-primary {
+  color: $deep-space-sparkle;
+}
+
 .btn-primary {
   background-color: $deep-space-sparkle !important;
   border-color: $deep-space-sparkle !important;
