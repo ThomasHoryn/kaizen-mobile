@@ -79,6 +79,7 @@
         </b-nav-item-dropdown>
         <b-nav-item-dropdown id="languagesnavBarDropdown" right v-if="languages && Object.keys(languages).length > 1">
           <template #button-content>
+            <font-awesome-icon icon="globe" />
             <span class="no-bold" v-text="t$('global.menu.language')"></span>
           </template>
           <b-dropdown-item
