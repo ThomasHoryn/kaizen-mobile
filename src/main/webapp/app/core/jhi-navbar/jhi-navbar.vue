@@ -20,7 +20,6 @@
       <b-navbar-nav class="ml-auto">
         <b-nav-item to="/" exact>
           <span>
-            <font-awesome-icon icon="home" />
             <span v-text="t$('global.menu.home')"></span>
           </span>
         </b-nav-item>
@@ -80,7 +79,6 @@
         </b-nav-item-dropdown>
         <b-nav-item-dropdown id="languagesnavBarDropdown" right v-if="languages && Object.keys(languages).length > 1">
           <template #button-content>
-            <font-awesome-icon icon="flag" />
             <span class="no-bold" v-text="t$('global.menu.language')"></span>
           </template>
           <b-dropdown-item

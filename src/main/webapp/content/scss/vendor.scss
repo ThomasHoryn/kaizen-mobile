@@ -14,5 +14,20 @@ eg $input-color: red;
 nav li.router-link-active .navbar-dropdown-menu {
   color: $navbar-light-active-color;
 }
-
 /* jhipster-needle-scss-add-vendor JHipster will add new css style */
+
+// Custom color name as SCSS variable
+$deep-space-sparkle: #121333;
+$background-color-light: #edf0f1;
+
+// Assigning custom color to Bootstrap variables
+$primary: $deep-space-sparkle;
+$body-color: $background-color-light;
+$font-size-sm: 1.2rem;
+
+.btn-primary {
+  background-color: $deep-space-sparkle !important;
+  border-color: $deep-space-sparkle !important;
+  padding: 1.2rem 2.8rem;
+  font-size: $font-size-sm;
+}
