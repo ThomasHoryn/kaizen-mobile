@@ -139,7 +139,8 @@
     Navbar
     ========================================================================== */
 .navbar-version {
-  font-size: 0.65em;
+  font-size: 0.5em;
+  color: #121333;
 }
 
 @media screen and (min-width: 768px) {
@@ -156,6 +157,7 @@
 
 .navbar-title {
   display: inline-block;
+  color: #121333;
 }
 
 /* ==========================================================================
@@ -174,10 +176,9 @@
 
 .logo-img {
   height: 100%;
-  background: url('/content/images/km-logo.jpg') no-repeat center center;
+  background: url('/content/images/km-logo-deep-space-sparkle.jpg') no-repeat center center;
   background-size: contain;
   width: 100%;
-  filter: drop-shadow(0 0 0.05rem white);
   margin: 0 5px;
 }
 </style>
