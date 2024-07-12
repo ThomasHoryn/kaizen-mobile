@@ -23,7 +23,15 @@
             <span v-text="t$('global.menu.home')"></span>
           </span>
         </b-nav-item>
-        <b-nav-item-dropdown right id="entity-menu" v-if="authenticated" active-class="active" class="pointer" data-cy="entity">
+
+        <b-nav-item-dropdown
+          right
+          id="entity-menu"
+          v-if="hasAnyAuthority('ROLE_ADMIN') && authenticated"
+          active-class="active"
+          class="pointer"
+          data-cy="entity"
+        >
           <template #button-content>
             <span class="navbar-dropdown-menu">
               <font-awesome-icon icon="th-list" />
@@ -33,6 +41,7 @@
           <entities-menu></entities-menu>
           <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
         </b-nav-item-dropdown>
+
         <b-nav-item-dropdown
           right
           id="admin-menu"
@@ -140,8 +149,14 @@
     Navbar
     ========================================================================== */
 .km-navbar {
-  margin-left: 10px;
+  margin-left: 2rem;
+  font-size: 1.1rem;
 }
+
+.km-navbar .nav-item {
+  margin-right: 1.2rem; /* Dostosuj wartość marginesu według potrzeb */
+}
+
 .navbar-version {
   font-size: 0.5em;
 }
@@ -160,14 +175,12 @@
 
 .navbar-title {
   display: inline-block;
+  font-size: 1.7rem;
 }
 
 /* ==========================================================================
     Logo styles
     ========================================================================== */
-.navbar-brand.logo {
-  padding: 0 7px;
-}
 
 .logo .logo-img {
   height: 45px;
