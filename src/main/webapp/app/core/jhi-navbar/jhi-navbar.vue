@@ -100,46 +100,49 @@
             {{ value.name }}
           </b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item-dropdown
-          right
-          href="javascript:void(0);"
-          id="account-menu"
-          :class="{ 'router-link-active': subIsActive('/account') }"
-          active-class="active"
-          class="pointer"
-          data-cy="accountMenu"
-        >
-          <template #button-content>
-            <span class="navbar-dropdown-menu">
-              <font-awesome-icon icon="user" />
-              <span class="no-bold" v-text="t$('global.menu.account.main')"></span>
-            </span>
-          </template>
-          <b-dropdown-item data-cy="settings" to="/account/settings" v-if="authenticated" active-class="active">
-            <font-awesome-icon icon="wrench" />
-            <span v-text="t$('global.menu.account.settings')"></span>
-          </b-dropdown-item>
-          <b-dropdown-item data-cy="passwordItem" to="/account/password" v-if="authenticated" active-class="active">
-            <font-awesome-icon icon="lock" />
-            <span v-text="t$('global.menu.account.password')"></span>
-          </b-dropdown-item>
-          <b-dropdown-item data-cy="logout" v-if="authenticated" v-on:click="logout()" id="logout" active-class="active">
-            <font-awesome-icon icon="sign-out-alt" />
-            <span v-text="t$('global.menu.account.logout')"></span>
-          </b-dropdown-item>
-          <b-dropdown-item data-cy="login" v-if="!authenticated" v-on:click="openLogin()" id="login" active-class="active">
-            <font-awesome-icon icon="sign-in-alt" />
-            <span v-text="t$('global.menu.account.login')"></span>
-          </b-dropdown-item>
-          <b-dropdown-item data-cy="register" to="/register" id="register" v-if="!authenticated" active-class="active">
-            <font-awesome-icon icon="user-plus" />
-            <span v-text="t$('global.menu.account.register')"></span>
-          </b-dropdown-item>
-        </b-nav-item-dropdown>
+        <!--        <b-nav-item-dropdown-->
+        <!--          right-->
+        <!--          href="javascript:void(0);"-->
+        <!--          id="account-menu"-->
+        <!--          :class="{ 'router-link-active': subIsActive('/account') }"-->
+        <!--          active-class="active"-->
+        <!--          class="pointer"-->
+        <!--          data-cy="accountMenu"-->
+        <!--        >-->
+        <!--          <template #button-content>-->
+        <!--            <span class="navbar-dropdown-menu">-->
+        <!--              <font-awesome-icon icon="user" />-->
+        <!--              <span class="no-bold" v-text="t$('global.menu.account.main')"></span>-->
+        <!--            </span>-->
+        <!--          </template>-->
+        <!--          <b-dropdown-item data-cy="settings" to="/account/settings" v-if="authenticated" active-class="active">-->
+        <!--            <font-awesome-icon icon="wrench" />-->
+        <!--            <span v-text="t$('global.menu.account.settings')"></span>-->
+        <!--          </b-dropdown-item>-->
+        <!--          <b-dropdown-item data-cy="passwordItem" to="/account/password" v-if="authenticated" active-class="active">-->
+        <!--            <font-awesome-icon icon="lock" />-->
+        <!--            <span v-text="t$('global.menu.account.password')"></span>-->
+        <!--          </b-dropdown-item>-->
+        <!--          <b-dropdown-item data-cy="logout" v-if="authenticated" v-on:click="logout()" id="logout" active-class="active">-->
+        <!--            <font-awesome-icon icon="sign-out-alt" />-->
+        <!--            <span v-text="t$('global.menu.account.logout')"></span>-->
+        <!--          </b-dropdown-item>-->
+        <!--        </b-nav-item-dropdown>-->
+        <b-nav-item to="/register">
+          <span>
+            <span v-text="t$('global.menu.account.register')"> </span>
+          </span>
+        </b-nav-item>
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
         <b-nav-item>
-          <button type="button" class="btn btn-lg btn-outline-secondary" v-text="t$('global.menu.account.login')"></button>
+          <button
+            type="button"
+            class="btn btn-lg btn-outline-secondary"
+            v-if="!authenticated"
+            v-on:click="openLogin()"
+            v-text="t$('global.menu.account.login')"
+          ></button>
         </b-nav-item>
         <b-nav-item>
           <button type="button" class="btn btn-lg btn-secondary" v-text="t$('global.menu.account.contact')"></button>
