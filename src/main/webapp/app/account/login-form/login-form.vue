@@ -1,7 +1,7 @@
 <template>
   <div class="modal-body">
     <div class="row justify-content-center">
-      <div class="col-md-10 pb-5">
+      <div class="col-md-10 km-margin-bottom">
         <b-alert
           show
           data-cy="loginError"
@@ -10,7 +10,7 @@
           v-html="t$('login.messages.error.authentication')"
         ></b-alert>
       </div>
-      <div class="logo-login pb-5">
+      <div class="logo-login km-margin-bottom">
         <span class="logo-login-img"></span>
         <span v-text="t$('global.title')"></span>
       </div>
@@ -39,7 +39,7 @@
             >
             </b-form-input>
           </b-form-group>
-          <div class="d-flex justify-content-between mb-5">
+          <div class="d-flex justify-content-between km-margin-bottom">
             <div>
               <b-form-checkbox id="rememberMe" name="rememberMe" v-model="rememberMe" checked>
                 <span v-text="t$('login.form.rememberme')"></span>
@@ -54,7 +54,7 @@
               ></b-link>
             </div>
           </div>
-          <div class="d-flex justify-content-end mb-3">
+          <div class="d-flex justify-content-end km-margin-bottom">
             <b-button
               :to="'/register'"
               type="submit"
@@ -65,7 +65,6 @@
             <b-button data-cy="submit" type="submit" variant="primary" class="btn-lg" v-text="t$('global.menu.account.login')"></b-button>
           </div>
         </b-form>
-        <p></p>
       </div>
     </div>
   </div>
