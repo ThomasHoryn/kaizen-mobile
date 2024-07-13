@@ -199,7 +199,7 @@
 
 .logo-img {
   height: 100%;
-  background: url('/content/images/km-logo-deep-space-sparkle.jpg') no-repeat center center;
+  background: url('/content/images/km-logo-gray.jpg') no-repeat center center;
   background-size: contain;
   width: 100%;
   margin: 0 5px;
