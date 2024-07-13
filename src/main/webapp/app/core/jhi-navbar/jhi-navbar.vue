@@ -2,7 +2,7 @@
   <b-navbar data-cy="navbar" toggleable="md" type="light">
     <b-navbar-brand class="logo" b-link to="/">
       <span class="logo-img"></span>
-      <span v-text="t$('global.title')" class="navbar-title km-primary"></span> <span class="navbar-version km-primary">{{ version }}</span>
+      <span v-text="t$('global.title')" class="navbar-title"></span> <span class="navbar-version">{{ version }}</span>
     </b-navbar-brand>
     <b-navbar-toggle
       right
@@ -137,6 +137,14 @@
           </b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item>
+          <button type="button" class="btn btn-lg btn-outline-secondary" v-text="t$('global.menu.account.login')"></button>
+        </b-nav-item>
+        <b-nav-item>
+          <button type="button" class="btn btn-lg btn-secondary" v-text="t$('global.menu.account.contact')"></button>
+        </b-nav-item>
+      </b-navbar-nav>
     </b-collapse>
   </b-navbar>
 </template>
@@ -154,7 +162,7 @@
 }
 
 .km-navbar .nav-item {
-  margin-right: 1.2rem; /* Dostosuj wartość marginesu według potrzeb */
+  margin-right: 1.2rem;
 }
 
 .navbar-version {

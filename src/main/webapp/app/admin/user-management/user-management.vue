@@ -92,10 +92,10 @@
                   </button>
                 </router-link>
                 <router-link :to="{ name: 'JhiUserEdit', params: { userId: user.login } }" custom v-slot="{ navigate }">
-                  <button @click="navigate" class="btn btn-primary btn-sm edit">
+                  <b-button @click="navigate" class="btn btn-primary btn-sm edit">
                     <font-awesome-icon icon="pencil-alt"></font-awesome-icon>
                     <span class="d-none d-md-inline" v-text="t$('entity.action.edit')"></span>
-                  </button>
+                  </b-button>
                 </router-link>
                 <b-button v-on:click="prepareRemove(user)" variant="danger" class="btn btn-sm delete" :disabled="username === user.login">
                   <font-awesome-icon icon="times"></font-awesome-icon>

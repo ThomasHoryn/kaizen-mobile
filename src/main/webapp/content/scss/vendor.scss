@@ -1,9 +1,5 @@
 /* after changing this file run 'npm run webapp:build' */
 
-/***************************
-put Sass variables here:
-eg $input-color: red;
-****************************/
 // Override Boostrap variables
 // Import Bootstrap source files from node_modules
 @import 'bootswatch/dist/cosmo/variables';
@@ -15,49 +11,3 @@ nav li.router-link-active .navbar-dropdown-menu {
   color: $navbar-light-active-color;
 }
 /* jhipster-needle-scss-add-vendor JHipster will add new css style */
-
-// Custom color name as SCSS variable
-$deep-space-sparkle: #121333;
-$free-speech-blue: #464acd;
-$umbry: #644f45;
-$background-color-light: #edf0f1;
-
-// Assigning custom color to Bootstrap variables
-$primary: $deep-space-sparkle;
-$secondary: $free-speech-blue;
-
-$body-color: $background-color-light;
-$font-size-sm: 1.2rem;
-
-.km-primary {
-  color: $primary;
-}
-
-.km-secondary {
-  color: $secondary;
-}
-
-.nav-link {
-  color: $deep-space-sparkle !important;
-  border-bottom: 2px solid transparent;
-}
-
-.nav-link:hover {
-  color: $secondary !important;
-  border-bottom: 2px solid $secondary;
-}
-nav li.router-link-active {
-  color: $secondary !important;
-  border-bottom: 2px solid $secondary;
-}
-
-nav li.router-link-active .navbar-dropdown-menu {
-  color: $secondary !important;
-}
-
-.btn-primary {
-  background-color: $deep-space-sparkle !important;
-  border-color: $deep-space-sparkle !important;
-  padding: 1.2rem 2.8rem;
-  font-size: $font-size-sm;
-}

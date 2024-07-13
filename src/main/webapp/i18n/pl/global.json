@@ -14,7 +14,8 @@
         "settings": "Ustawienia",
         "password": "Hasło",
         "sessions": "Sesje",
-        "login": "Autoryzacja",
+        "login": "Zaloguj się",
+        "contact": "Zamówienia aplikacji",
         "logout": "Wyloguj",
         "register": "Zarejestruj się"
       },
