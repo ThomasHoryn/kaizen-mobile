@@ -1,7 +1,7 @@
 <template>
   <div class="modal-body">
     <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-10 pb-5">
         <b-alert
           show
           data-cy="loginError"
@@ -10,7 +10,11 @@
           v-html="t$('login.messages.error.authentication')"
         ></b-alert>
       </div>
-      <div class="col-md-8">
+      <div class="logo-login pb-5">
+        <span class="logo-login-img"></span>
+        <span v-text="t$('global.title')"></span>
+      </div>
+      <div class="col-md-10">
         <b-form v-on:submit.prevent="doLogin()">
           <b-form-group v-bind:label="t$('global.form[\'username.label\']')" label-for="username">
             <b-form-input
@@ -35,30 +39,33 @@
             >
             </b-form-input>
           </b-form-group>
-          <b-form-checkbox id="rememberMe" name="rememberMe" v-model="rememberMe" checked>
-            <span v-text="t$('login.form.rememberme')"></span>
-          </b-form-checkbox>
-          <div>
-            <b-button data-cy="submit" type="submit" variant="primary" v-text="t$('login.form.button')"></b-button>
+          <div class="d-flex justify-content-between mb-5">
+            <div>
+              <b-form-checkbox id="rememberMe" name="rememberMe" v-model="rememberMe" checked>
+                <span v-text="t$('login.form.rememberme')"></span>
+              </b-form-checkbox>
+            </div>
+            <div>
+              <b-link
+                :to="'/account/reset/request'"
+                class="alert-link"
+                v-text="t$('login.password.forgot')"
+                data-cy="forgetYourPasswordSelector"
+              ></b-link>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end mb-3">
+            <b-button
+              :to="'/register'"
+              type="submit"
+              variant="outline-primary"
+              class="btn-lg mr-3"
+              v-text="t$('global.menu.account.register')"
+            ></b-button>
+            <b-button data-cy="submit" type="submit" variant="primary" class="btn-lg" v-text="t$('global.menu.account.login')"></b-button>
           </div>
         </b-form>
         <p></p>
-        <div>
-          <b-alert show variant="warning">
-            <b-link
-              :to="'/account/reset/request'"
-              class="alert-link"
-              v-text="t$('login.password.forgot')"
-              data-cy="forgetYourPasswordSelector"
-            ></b-link>
-          </b-alert>
-        </div>
-        <div>
-          <b-alert show variant="warning">
-            <span v-text="t$('global.messages.info.register.noaccount')"></span>
-            <b-link :to="'/register'" class="alert-link" v-text="t$('global.messages.info.register.link')"></b-link>
-          </b-alert>
-        </div>
       </div>
     </div>
   </div>
