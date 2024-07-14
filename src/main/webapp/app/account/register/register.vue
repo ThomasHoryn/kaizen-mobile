@@ -24,7 +24,10 @@
               v-model="v$.registerAccount.login.$model"
               id="username"
               name="login"
-              :class="{ valid: !v$.registerAccount.login.$invalid, invalid: v$.registerAccount.login.$invalid }"
+              :class="{
+                valid: !v$.registerAccount.login.$invalid && v$.registerAccount.login.$anyDirty,
+                invalid: v$.registerAccount.login.$invalid && v$.registerAccount.login.$anyDirty,
+              }"
               required
               minlength="1"
               maxlength="50"
@@ -62,7 +65,10 @@
               class="form-control"
               id="email"
               name="email"
-              :class="{ valid: !v$.registerAccount.email.$invalid, invalid: v$.registerAccount.email.$invalid }"
+              :class="{
+                valid: !v$.registerAccount.email.$invalid && v$.registerAccount.email.$anyDirty,
+                invalid: v$.registerAccount.email.$invalid && v$.registerAccount.email.$anyDirty,
+              }"
               v-model="v$.registerAccount.email.$model"
               minlength="5"
               maxlength="254"
@@ -101,7 +107,10 @@
               class="form-control"
               id="firstPassword"
               name="password"
-              :class="{ valid: !v$.registerAccount.password.$invalid, invalid: v$.registerAccount.password.$invalid }"
+              :class="{
+                valid: !v$.registerAccount.password.$invalid && v$.registerAccount.password.$anyDirty,
+                invalid: v$.registerAccount.password.$invalid && v$.registerAccount.password.$anyDirty,
+              }"
               v-model="v$.registerAccount.password.$model"
               minlength="4"
               maxlength="50"
@@ -134,7 +143,10 @@
               class="form-control"
               id="secondPassword"
               name="confirmPasswordInput"
-              :class="{ valid: !v$.confirmPassword.$invalid, invalid: v$.confirmPassword.$invalid }"
+              :class="{
+                valid: !v$.confirmPassword.$invalid && v$.confirmPassword.$dirty,
+                invalid: v$.confirmPassword.$invalid && v$.confirmPassword.$dirty,
+              }"
               v-model="v$.confirmPassword.$model"
               minlength="4"
               maxlength="50"
