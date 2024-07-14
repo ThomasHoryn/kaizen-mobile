@@ -35,22 +35,16 @@
               v-bind:placeholder="t$('global.form[\'username.placeholder\']')"
               data-cy="username"
             />
+            <small v-text="v$.registerAccount.login"></small>
+
             <div v-if="v$.registerAccount.login.$anyDirty && v$.registerAccount.login.$invalid">
-              <small
-                class="form-text text-danger"
-                v-if="!v$.registerAccount.login.required"
-                v-text="t$('register.messages.validate.login.required')"
-              ></small>
-              <small
-                class="form-text text-danger"
-                v-if="!v$.registerAccount.login.minLength"
-                v-text="t$('register.messages.validate.login.minlength')"
-              ></small>
-              <small
-                class="form-text text-danger"
-                v-if="!v$.registerAccount.login.maxLength"
-                v-text="t$('register.messages.validate.login.maxlength')"
-              ></small>
+              <transition name="fade">
+                <small
+                  class="form-text text-danger"
+                  v-if="v$.registerAccount.login.$invalid && !v$.registerAccount.login.pattern.$invalid"
+                  v-text="t$('register.messages.validate.login.required')"
+                ></small>
+              </transition>
               <transition name="fade">
                 <small
                   class="form-text text-danger"
