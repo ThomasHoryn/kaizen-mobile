@@ -35,8 +35,6 @@
               v-bind:placeholder="t$('global.form[\'username.placeholder\']')"
               data-cy="username"
             />
-            <small v-text="v$.registerAccount.login"></small>
-
             <div v-if="v$.registerAccount.login.$anyDirty && v$.registerAccount.login.$invalid">
               <transition name="fade">
                 <small
