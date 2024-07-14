@@ -62,7 +62,14 @@
               class="btn-lg mr-3"
               v-text="t$('global.menu.account.register')"
             ></b-button>
-            <b-button data-cy="submit" type="submit" variant="primary" class="btn-lg" v-text="t$('global.menu.account.login')"> </b-button>
+            <b-button
+              data-cy="submit"
+              :disabled="!login || !password || login.length < 1 || password.length < 4"
+              type="submit"
+              variant="primary"
+              class="btn-lg"
+              v-text="t$('global.menu.account.login')"
+            ></b-button>
           </div>
         </b-form>
       </div>
