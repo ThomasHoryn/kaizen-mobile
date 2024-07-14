@@ -170,14 +170,14 @@
             <button
               @click="openLogin()"
               class="btn btn-outline-primary btn-lg mr-3"
-              v-text="t$('global.messages.info.authenticated.link')"
+              v-text="t$('global.menu.account.login')"
               data-cy="submit"
             ></button>
             <button
               type="submit"
               :disabled="v$.$invalid"
               class="btn btn-primary btn-lg"
-              v-text="t$('register.form.button')"
+              v-text="t$('global.menu.account.register')"
               data-cy="submit"
             ></button>
           </div>
