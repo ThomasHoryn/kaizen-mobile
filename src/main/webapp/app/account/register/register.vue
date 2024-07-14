@@ -51,11 +51,13 @@
                 v-if="!v$.registerAccount.login.maxLength"
                 v-text="t$('register.messages.validate.login.maxlength')"
               ></small>
-              <small
-                class="form-text text-danger"
-                v-if="!v$.registerAccount.login.pattern"
-                v-text="t$('register.messages.validate.login.pattern')"
-              ></small>
+              <transition name="fade">
+                <small
+                  class="form-text text-danger"
+                  v-show="v$.registerAccount.login.pattern.$invalid"
+                  v-text="t$('register.messages.validate.login.pattern')"
+                ></small>
+              </transition>
             </div>
           </div>
           <div class="form-group">
