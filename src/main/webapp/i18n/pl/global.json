@@ -76,7 +76,7 @@
           "required": "Twój email jest wymagany.",
           "invalid": "Twój email jest błędny.",
           "minlength": "Twój email musi mieć przynajmniej 5 znaków",
-          "maxlength": "Twój email nie może być dłuższy niż 50 znaków"
+          "maxlength": "Twój email nie może być dłuższy niż 254 znaki"
         }
       }
     },

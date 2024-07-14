@@ -75,7 +75,7 @@
           "required": "Email je povinný.",
           "invalid": "Zadaný email není validní.",
           "minlength": "Váš email musí mít alespoň 5 znaků.",
-          "maxlength": "Váš email nemůže být delší než 50 znaků."
+          "maxlength": "Váš email nemůže být delší než 254 znaků."
         }
       }
     },

@@ -76,7 +76,7 @@
           "required": "Ihre Email Adresse wird benötigt.",
           "invalid": "Ihre Email Adresse ist ungültig.",
           "minlength": "Ihre Email Adresse muss mindestens 5 Zeichen lang sein",
-          "maxlength": "Ihre Email Adresse darf nicht länger als 50 Zeichen sein"
+          "maxlength": "Ihre Email Adresse darf nicht länger als 254 Zeichen sein"
         }
       }
     },
