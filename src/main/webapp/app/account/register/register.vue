@@ -36,20 +36,16 @@
               data-cy="username"
             />
             <div v-if="v$.registerAccount.login.$anyDirty && v$.registerAccount.login.$invalid">
-              <transition name="fade">
-                <small
-                  class="form-text text-danger"
-                  v-if="v$.registerAccount.login.$invalid && !v$.registerAccount.login.pattern.$invalid"
-                  v-text="t$('register.messages.validate.login.required')"
-                ></small>
-              </transition>
-              <transition name="fade">
-                <small
-                  class="form-text text-danger"
-                  v-show="v$.registerAccount.login.pattern.$invalid"
-                  v-text="t$('register.messages.validate.login.pattern')"
-                ></small>
-              </transition>
+              <small
+                class="form-text text-danger"
+                v-if="v$.registerAccount.login.$invalid && !v$.registerAccount.login.pattern.$invalid"
+                v-text="t$('register.messages.validate.login.required')"
+              ></small>
+              <small
+                class="form-text text-danger"
+                v-show="v$.registerAccount.login.pattern.$invalid"
+                v-text="t$('register.messages.validate.login.pattern')"
+              ></small>
             </div>
           </div>
           <div class="form-group">
@@ -74,22 +70,24 @@
             <div v-if="v$.registerAccount.email.$anyDirty && v$.registerAccount.email.$invalid">
               <small
                 class="form-text text-danger"
-                v-if="!v$.registerAccount.email.required"
+                v-if="v$.registerAccount.email.required.$invalid"
                 v-text="t$('global.messages.validate.email.required')"
               ></small>
+
               <small
                 class="form-text text-danger"
-                v-if="!v$.registerAccount.email.email"
+                v-if="v$.registerAccount.email.email.$invalid"
                 v-text="t$('global.messages.validate.email.invalid')"
               ></small>
+
               <small
                 class="form-text text-danger"
-                v-if="!v$.registerAccount.email.minLength"
+                v-if="v$.registerAccount.email.minLength.$invalid"
                 v-text="t$('global.messages.validate.email.minlength')"
               ></small>
               <small
                 class="form-text text-danger"
-                v-if="!v$.registerAccount.email.maxLength"
+                v-if="v$.registerAccount.email.maxLength.$invalid"
                 v-text="t$('global.messages.validate.email.maxlength')"
               ></small>
             </div>
@@ -115,17 +113,18 @@
             <div v-if="v$.registerAccount.password.$anyDirty && v$.registerAccount.password.$invalid">
               <small
                 class="form-text text-danger"
-                v-if="!v$.registerAccount.password.required"
+                v-if="v$.registerAccount.password.required.$invalid"
                 v-text="t$('global.messages.validate.newpassword.required')"
               ></small>
               <small
                 class="form-text text-danger"
-                v-if="!v$.registerAccount.password.minLength"
+                v-if="v$.registerAccount.password.minLength.$invalid"
                 v-text="t$('global.messages.validate.newpassword.minlength')"
               ></small>
+
               <small
                 class="form-text text-danger"
-                v-if="!v$.registerAccount.password.maxLength"
+                v-if="v$.registerAccount.password.maxLength.$invalid"
                 v-text="t$('global.messages.validate.newpassword.maxlength')"
               ></small>
             </div>
@@ -151,22 +150,25 @@
             <div v-if="v$.confirmPassword.$dirty && v$.confirmPassword.$invalid">
               <small
                 class="form-text text-danger"
-                v-if="!v$.confirmPassword.required"
+                v-if="v$.confirmPassword.required.$invalid"
                 v-text="t$('global.messages.validate.confirmpassword.required')"
               ></small>
+
               <small
                 class="form-text text-danger"
-                v-if="!v$.confirmPassword.minLength"
+                v-if="v$.confirmPassword.minLength.$invalid"
                 v-text="t$('global.messages.validate.confirmpassword.minlength')"
               ></small>
+
               <small
                 class="form-text text-danger"
-                v-if="!v$.confirmPassword.maxLength"
+                v-if="v$.confirmPassword.maxLength.$invalid"
                 v-text="t$('global.messages.validate.confirmpassword.maxlength')"
               ></small>
+
               <small
                 class="form-text text-danger"
-                v-if="!v$.confirmPassword.sameAsPassword"
+                v-if="v$.confirmPassword.sameAsPassword.$invalid"
                 v-text="t$('global.messages.error.dontmatch')"
               ></small>
             </div>
