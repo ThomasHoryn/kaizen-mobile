@@ -140,15 +140,6 @@ Main page styles
 Generic styles
 ========================================================================== */
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
 /* Error highlight on input fields */
 .valid[required],
 .valid.required {
