@@ -152,6 +152,10 @@ Generic styles
 
 /* other generic styles */
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 .jh-card {
   padding: 1.5%;
   margin-top: 20px;

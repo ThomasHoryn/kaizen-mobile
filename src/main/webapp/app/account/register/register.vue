@@ -2,7 +2,7 @@
   <div>
     <div class="row justify-content-center">
       <div class="col-md-8 toastify-container">
-        <h1 v-text="t$('register.title')" id="register-title" data-cy="registerTitle"></h1>
+        <h1 v-text="t$('register.title')" class="km-margin-bottom" id="register-title" data-cy="registerTitle"></h1>
 
         <div class="alert alert-success" role="alert" v-if="success" v-html="t$('register.messages.success')"></div>
 
@@ -166,20 +166,22 @@
             </div>
           </div>
 
-          <button
-            type="submit"
-            :disabled="v$.$invalid"
-            class="btn btn-primary"
-            v-text="t$('register.form.button')"
-            data-cy="submit"
-          ></button>
+          <div class="d-flex justify-content-end mt-5 mb-5">
+            <button
+              @click="openLogin()"
+              class="btn btn-outline-primary btn-lg mr-3"
+              v-text="t$('global.messages.info.authenticated.link')"
+              data-cy="submit"
+            ></button>
+            <button
+              type="submit"
+              :disabled="v$.$invalid"
+              class="btn btn-primary btn-lg"
+              v-text="t$('register.form.button')"
+              data-cy="submit"
+            ></button>
+          </div>
         </form>
-        <p></p>
-        <div class="alert alert-warning">
-          <span v-text="t$('global.messages.info.authenticated.prefix')"></span>
-          <a class="alert-link" v-on:click="openLogin()" v-text="t$('global.messages.info.authenticated.link')"></a
-          ><span v-html="t$('global.messages.info.authenticated.suffix')"></span>
-        </div>
       </div>
     </div>
   </div>
