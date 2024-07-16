@@ -57,7 +57,7 @@ let config = defineConfig({
   },
   server: {
     host: true,
-    port: 9000,
+    port: 80,
     proxy: Object.fromEntries(
       ['/api', '/management', '/v3/api-docs', '/h2-console'].map(res => [
         res,
