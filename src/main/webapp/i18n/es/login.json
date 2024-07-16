@@ -9,7 +9,8 @@
     },
     "messages": {
       "error": {
-        "authentication": "<strong>¡El inicio de sesión ha fallado!</strong> Por favor, revise las credenciales e intente de nuevo."
+        "authentication": "<strong>¡El inicio de sesión ha fallado!</strong> Por favor, revise las credenciales e intente de nuevo.",
+        "notactivated": "<strong>¡Cuenta no activada!</strong> Por favor, revise su correo electrónico y active su cuenta."
       }
     },
     "password": {

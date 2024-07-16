@@ -9,7 +9,8 @@
     },
     "messages": {
       "error": {
-        "authentication": "<strong>Erreur d'authentification !</strong> Veuillez vérifier vos identifiants de connexion."
+        "authentication": "<strong>Erreur d'authentification !</strong> Veuillez vérifier vos identifiants de connexion.",
+        "notactivated": "<strong>Compte non activé !</strong> Veuillez vérifier votre courrier électronique et activer votre compte."
       }
     },
     "password": {

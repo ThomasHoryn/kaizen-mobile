@@ -9,7 +9,8 @@
     },
     "messages": {
       "error": {
-        "authentication": "<strong>Nieudane logowanie!</strong> Sprawdź swoje dane logowania i spróbuj ponownie."
+        "authentication": "<strong>Nieudane logowanie!</strong> Sprawdź swoje dane logowania i spróbuj ponownie.",
+        "notactivated": "<strong>Konto nieaktywne!</strong> Sprawdź swoją skrzynkę e-mail i aktywuj swoje konto."
       }
     },
     "password": {

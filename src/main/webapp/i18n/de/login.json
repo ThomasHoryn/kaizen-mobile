@@ -9,7 +9,8 @@
     },
     "messages": {
       "error": {
-        "authentication": "<strong>Anmeldung fehlgeschlagen!</strong> Überprüfen Sie bitte Ihre Angaben und versuchen Sie es erneut."
+        "authentication": "<strong>Anmeldung fehlgeschlagen!</strong> Überprüfen Sie bitte Ihre Angaben und versuchen Sie es erneut.",
+        "notactivated": "<strong>Konto nicht aktiviert!</strong> Bitte überprüfen Sie Ihre E-Mails und aktivieren Sie Ihr Konto."
       }
     },
     "password": {
