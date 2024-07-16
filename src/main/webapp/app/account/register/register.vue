@@ -12,7 +12,7 @@
 
         <div class="alert alert-danger" role="alert" v-if="errorEmailExists" v-html="t$('register.messages.error.emailexists')"></div>
 
-        <div class="alert alert-danger" role="alert" v-if="errorCompanyExists" v-html="t$('register.messages.error.companyexists')"></div>
+        <div class="alert alert-danger" role="alert" v-if="errorCompanyExists" v-html="t$('error.companyexists')"></div>
       </div>
     </div>
     <div class="row justify-content-center">
