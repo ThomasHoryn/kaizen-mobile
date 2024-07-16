@@ -1,6 +1,10 @@
 DEFAULT_MIN_LENGTH = 1
 DEFAULT_MAX_LENGTH = 254
 
+entity AppStats {
+    usedTenantId String minlength(DEFAULT_MIN_LENGTH) maxlength(DEFAULT_MAX_LENGTH)
+}
+
 entity AppUser {
     tenantId String minlength(DEFAULT_MIN_LENGTH) maxlength(DEFAULT_MAX_LENGTH)
 }

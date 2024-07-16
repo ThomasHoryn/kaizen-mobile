@@ -1,0 +1,24 @@
+{
+  "kaizenMobileApp": {
+    "appStats": {
+      "home": {
+        "title": "App Stats",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo App Stats",
+        "createOrEditLabel": "Crear o editar App Stats",
+        "notFound": "Ningún App Stats encontrado"
+      },
+      "created": "Un nuevo App Stats ha sido creado con el identificador { param }",
+      "updated": "Un App Stats ha sido actualizado con el identificador { param }",
+      "deleted": "Un App Stats ha sido eliminado con el identificador { param }",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar App Stats { id }?"
+      },
+      "detail": {
+        "title": "App Stats"
+      },
+      "id": "ID",
+      "usedTenantId": "Used Tenant Id"
+    }
+  }
+}

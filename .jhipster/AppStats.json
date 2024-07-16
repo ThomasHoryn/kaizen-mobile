@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "changelogDate": "20240716054701"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "usedTenantId",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "254",
+      "fieldValidateRulesMinlength": "1"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "AppStats",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

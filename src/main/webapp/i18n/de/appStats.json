@@ -1,0 +1,24 @@
+{
+  "kaizenMobileApp": {
+    "appStats": {
+      "home": {
+        "title": "App Stats",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "App Stats erstellen",
+        "createOrEditLabel": "App Stats erstellen oder bearbeiten",
+        "notFound": "Keine App Stats gefunden"
+      },
+      "created": "App Stats erstellt mit ID { param }",
+      "updated": "App Stats aktualisiert mit ID { param }",
+      "deleted": "App Stats gelöscht mit ID { param }",
+      "delete": {
+        "question": "Soll App Stats { id } wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "App Stats"
+      },
+      "id": "ID",
+      "usedTenantId": "Used Tenant Id"
+    }
+  }
+}
