@@ -5,7 +5,7 @@
 
     <groupId>com.kaizenmobile</groupId>
     <artifactId>kaizen-mobile</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
     <name>Kaizen Mobile</name>
     <description>Description for Kaizen Mobile</description>

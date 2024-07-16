@@ -1,10 +1,9 @@
+ _   __      _                                     _     _ _
+| | / /     (_)                                   | |   (_) |
+| |/ /  __ _ _ _______ _ __ ______ _ __ ___   ___ | |__  _| | ___
+|    \ / _` | |_  / _ \ '_ \______| '_ ` _ \ / _ \| '_ \| | |/ _ \
+| |\  \ (_| | |/ /  __/ | | |     | | | | | | (_) | |_) | | |  __/
+\_| \_/\__,_|_/___\___|_| |_|     |_| |_| |_|\___/|_.__/|_|_|\___|
 
- ${AnsiColor.GREEN}      ██╗${AnsiColor.BLUE} ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ████${AnsiColor.GREEN}███╗
- ${AnsiColor.GREEN}      ██║ ██║ ${AnsiColor.BLUE}  ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔══${AnsiColor.GREEN}═══╝ ██╔═══██╗
- ${AnsiColor.GREEN}      ██║ ████████║${AnsiColor.BLUE}    ██║    ███████╔╝ ╚█████╗     ██║   ${AnsiColor.GREEN} ██████╗   ███████╔╝
- ${AnsiColor.GREEN}██╗   ██║ ██╔═══██║    ██║   ${AnsiColor.BLUE} ██╔════╝   ╚═══██╗    ${AnsiColor.GREEN}██║    ██╔═══╝   ██╔══██║
- ${AnsiColor.GREEN}╚██████╔╝ ██║   ██║ ████████╗ ██║ ${AnsiColor.BLUE}      ██████${AnsiColor.GREEN}╔╝    ██║    ████████╗ ██║  ╚██╗
- ${AnsiColor.GREEN} ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝      ${AnsiColor.BLUE} ╚═${AnsiColor.GREEN}════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
-
-${AnsiColor.BRIGHT_BLUE}:: JHipster 🤓  :: Running Spring Boot ${spring-boot.version} :: Startup profile(s) ${spring.profiles.active} ::
-:: https://www.jhipster.tech ::${AnsiColor.DEFAULT}
+${AnsiColor.BRIGHT_RED}:: Running Kaizen Mobile ${application.formatted-version}  :: Running Spring Boot ${spring-boot.version} :: Startup profile(s) ${spring.profiles.active} ::
+${AnsiColor.WHITE}:: https://www.kaizen-mobile.com :: :: https://github.com/ThomasHoryn/kaizen-mobile :: ${AnsiColor.DEFAULT}
