@@ -45,7 +45,9 @@
       "confirmpassword.label": "Potwierdź nowe hasło",
       "confirmpassword.placeholder": "Potwierdź nowe hasło",
       "email.label": "Email",
-      "email.placeholder": "Twój email"
+      "email.placeholder": "Twój email",
+      "company.label": "Nazwa firmy",
+      "company.placeholder": "Twoja firma"
     },
     "messages": {
       "info": {
@@ -139,7 +141,7 @@
     "idexists": "Nowy { entityName } nie może jeszcze mieć przypisanego ID",
     "idnull": "Brakujące ID",
     "idinvalid": "Niepoprawne ID",
-    "companyexists": "Nazwa firmy jest już używana!",
+    "companyexists": "Nazwa firmy {company} jest już używana! <br/><br/>Jeśli jesteś administratorem, zaloguj się i dodaj nowego użytkownika. <br/>Jeśli jesteś nowym użytkownikiem, poproś administratora o dodanie Cię do aplikacji.",
     "idnotfound": "ID nie może zostać znalezione",
     "file": {
       "could.not.extract": "Nie można wypakować pliku.",

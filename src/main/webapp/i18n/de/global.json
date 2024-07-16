@@ -45,7 +45,9 @@
       "confirmpassword.label": "Neues Passwort bestätigen",
       "confirmpassword.placeholder": "Bestätigen Sie Ihr neues Passwort",
       "email.label": "Email Adresse",
-      "email.placeholder": "Ihre Email Adresse"
+      "email.placeholder": "Ihre Email Adresse",
+      "company.label": "Firmenname",
+      "company.placeholder": "Ihr Firmenname"
     },
     "messages": {
       "info": {

@@ -44,7 +44,9 @@
       "confirmpassword.label": "Potvrzení nového hesla",
       "confirmpassword.placeholder": "Potvrzení nového hesla",
       "email.label": "Email",
-      "email.placeholder": "Váš email"
+      "email.placeholder": "Váš email",
+      "company.label": "Název společnosti",
+      "company.placeholder": "Vaše společnost"
     },
     "messages": {
       "info": {

@@ -45,7 +45,9 @@
       "confirmpassword.label": "Confirmation du nouveau mot de passe",
       "confirmpassword.placeholder": "Confirmation du nouveau mot de passe",
       "email.label": "Email",
-      "email.placeholder": "Votre email"
+      "email.placeholder": "Votre email",
+      "company.label": "Nom de l'entreprise",
+      "company.placeholder": "Votre entreprise"
     },
     "messages": {
       "info": {
