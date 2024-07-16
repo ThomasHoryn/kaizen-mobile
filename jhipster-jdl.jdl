@@ -1,0 +1,13 @@
+DEFAULT_MIN_LENGTH = 1
+DEFAULT_MAX_LENGTH = 254
+
+entity AppUser {
+    tenantId String minlength(DEFAULT_MIN_LENGTH) maxlength(DEFAULT_MAX_LENGTH)
+}
+
+relationship OneToOne {
+    AppUser{internalUser(login)} to @OnDelete("CASCADE") @Id User with builtInEntity
+}
+
+filter *
+service * with serviceClass

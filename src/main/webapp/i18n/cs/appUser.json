@@ -1,0 +1,25 @@
+{
+  "kaizenMobileApp": {
+    "appUser": {
+      "home": {
+        "title": "App Users",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Vytvořit App User",
+        "createOrEditLabel": "Vytvořit nebo upravit App User",
+        "notFound": "No App Users found"
+      },
+      "created": "Byl vytvořen potomek entity App User s identifikátorem { param }",
+      "updated": "Potomek entity App User s identifikátorem { param } byl upravený.",
+      "deleted": "Potomek entity App User s identifikátorem { param } bol smazaný.",
+      "delete": {
+        "question": "Jste si jisti, že chcete smazat App User { id }?"
+      },
+      "detail": {
+        "title": "App User"
+      },
+      "id": "ID",
+      "tenantId": "Tenant Id",
+      "internalUser": "Internal User"
+    }
+  }
+}

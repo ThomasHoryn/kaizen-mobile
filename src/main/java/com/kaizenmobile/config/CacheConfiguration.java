@@ -50,6 +50,7 @@ public class CacheConfiguration {
             createCache(cm, com.kaizenmobile.domain.User.class.getName());
             createCache(cm, com.kaizenmobile.domain.Authority.class.getName());
             createCache(cm, com.kaizenmobile.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.kaizenmobile.domain.AppUser.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

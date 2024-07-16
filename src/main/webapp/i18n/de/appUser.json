@@ -1,0 +1,25 @@
+{
+  "kaizenMobileApp": {
+    "appUser": {
+      "home": {
+        "title": "App Users",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "App User erstellen",
+        "createOrEditLabel": "App User erstellen oder bearbeiten",
+        "notFound": "Keine App Users gefunden"
+      },
+      "created": "App User erstellt mit ID { param }",
+      "updated": "App User aktualisiert mit ID { param }",
+      "deleted": "App User gelöscht mit ID { param }",
+      "delete": {
+        "question": "Soll App User { id } wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "App User"
+      },
+      "id": "ID",
+      "tenantId": "Tenant Id",
+      "internalUser": "Internal User"
+    }
+  }
+}
