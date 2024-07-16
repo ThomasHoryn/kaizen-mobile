@@ -9,6 +9,13 @@
           v-if="authenticationError"
           v-html="t$('login.messages.error.authentication')"
         ></b-alert>
+        <b-alert
+          show
+          data-cy="loginError"
+          variant="danger"
+          v-if="userNotActiveError"
+          v-html="t$('login.messages.error.notactivated')"
+        ></b-alert>
       </div>
       <div class="logo-login km-margin-bottom">
         <span class="logo-login-img"></span>

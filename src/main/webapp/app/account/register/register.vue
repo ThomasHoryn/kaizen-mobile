@@ -11,11 +11,47 @@
         <div class="alert alert-danger" role="alert" v-if="errorUserExists" v-html="t$('register.messages.error.userexists')"></div>
 
         <div class="alert alert-danger" role="alert" v-if="errorEmailExists" v-html="t$('register.messages.error.emailexists')"></div>
+
+        <div class="alert alert-danger" role="alert" v-if="errorCompanyExists" v-html="t$('register.messages.error.companyexists')"></div>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-md-8">
         <form id="register-form" name="registerForm" v-on:submit.prevent="register()" v-if="!success" no-validate>
+          <div class="form-group">
+            <label class="form-control-label" for="company" v-text="t$('global.form[\'company.label\']')"></label>
+            <input
+              type="text"
+              class="form-control"
+              v-model="v$.registerAccount.company.$model"
+              id="company"
+              name="name"
+              :class="{
+                valid: !v$.registerAccount.company.$invalid && v$.registerAccount.company.$anyDirty,
+                invalid: v$.registerAccount.company.$invalid && v$.registerAccount.company.$anyDirty,
+              }"
+              required
+              minlength="1"
+              maxlength="254"
+              pattern="^[a-zA-Z0-9-. ]+$"
+              v-bind:placeholder="t$('global.form[\'company.placeholder\']')"
+              data-cy="company"
+            />
+            <div v-if="v$.registerAccount.company.$anyDirty && v$.registerAccount.company.$invalid">
+              <small
+                class="form-text text-danger"
+                v-if="v$.registerAccount.company.pattern.$invalid"
+                v-text="t$('register.messages.validate.company.pattern')"
+              >
+              </small>
+              <small
+                class="form-text text-danger"
+                v-if="v$.registerAccount.company.$invalid && !v$.registerAccount.company.pattern.$invalid"
+                v-text="t$('register.messages.validate.company.required')"
+              ></small>
+            </div>
+          </div>
+
           <div class="form-group">
             <label class="form-control-label" for="username" v-text="t$('global.form[\'username.label\']')"></label>
             <input
@@ -31,7 +67,7 @@
               required
               minlength="1"
               maxlength="50"
-              pattern="^[a-zA-Z0-9!#$&'*+=?^_`{|}~.-]+@?[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+              pattern="^[a-zA-Z0-9-. ]+$"
               v-bind:placeholder="t$('global.form[\'username.placeholder\']')"
               data-cy="username"
             />

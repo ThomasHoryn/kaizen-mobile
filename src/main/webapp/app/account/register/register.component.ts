@@ -4,9 +4,11 @@ import { useVuelidate } from '@vuelidate/core';
 import { email, helpers, maxLength, minLength, required, sameAs } from '@vuelidate/validators';
 import type LoginService from '@/account/login.service';
 import RegisterService from '@/account/register/register.service';
-import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '@/constants';
+import { COMPANY_ALREADY_USED_TYPE, EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '@/constants';
 
-const loginPattern = helpers.regex(/^[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$|^[_.@A-Za-z0-9-]+$/);
+const lettersNumbersDotAndDashPattern = helpers.regex(
+  /^[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$|^[_.@A-Za-z0-9-]+$/,
+);
 
 export default defineComponent({
   compatConfig: { MODE: 3 },
@@ -14,11 +16,17 @@ export default defineComponent({
   validations() {
     return {
       registerAccount: {
+        company: {
+          required,
+          minLength: minLength(1),
+          maxLength: maxLength(254),
+          pattern: lettersNumbersDotAndDashPattern,
+        },
         login: {
           required,
           minLength: minLength(1),
           maxLength: maxLength(50),
-          pattern: loginPattern,
+          pattern: lettersNumbersDotAndDashPattern,
         },
         email: {
           required,
@@ -48,10 +56,12 @@ export default defineComponent({
     const error: Ref<string> = ref('');
     const errorEmailExists: Ref<string> = ref('');
     const errorUserExists: Ref<string> = ref('');
+    const errorCompanyExists: Ref<string> = ref('');
     const success: Ref<boolean> = ref(false);
 
     const confirmPassword: Ref<any> = ref(null);
     const registerAccount: Ref<any> = ref({
+      company: undefined,
       login: undefined,
       email: undefined,
       password: undefined,
@@ -67,6 +77,7 @@ export default defineComponent({
       registerService,
       error,
       errorEmailExists,
+      errorCompanyExists,
       errorUserExists,
       success,
       confirmPassword,
@@ -80,6 +91,7 @@ export default defineComponent({
       this.error = null;
       this.errorUserExists = null;
       this.errorEmailExists = null;
+      this.errorCompanyExists = null;
       this.registerAccount.langKey = this.currentLanguage;
       this.registerService
         .processRegistration(this.registerAccount)
@@ -92,6 +104,8 @@ export default defineComponent({
             this.errorUserExists = 'ERROR';
           } else if (error.response.status === 400 && error.response.data.type === EMAIL_ALREADY_USED_TYPE) {
             this.errorEmailExists = 'ERROR';
+          } else if (error.response.status === 400 && error.response.data.type === COMPANY_ALREADY_USED_TYPE) {
+            this.errorCompanyExists = 'ERROR';
           } else {
             this.error = 'ERROR';
           }

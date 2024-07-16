@@ -87,4 +87,8 @@ public class AppStatsService {
         log.debug("Request to delete AppStats : {}", id);
         appStatsRepository.deleteById(id);
     }
+
+    public boolean isCompanyNameUsed(String companyName) {
+        return appStatsRepository.findOneByUsedTenantIdIgnoreCase(companyName).isPresent();
+    }
 }

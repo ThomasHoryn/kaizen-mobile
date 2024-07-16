@@ -139,6 +139,7 @@
     "emailexists": "Email déjà utilisé !",
     "idexists": "Une nouvelle entité { entityName } ne peut pas avoir d'identifiant !",
     "idnull": "Identifiant invalide",
+    "companyexists": "Le nom de l'entreprise est déjà utilisé !",
     "idinvalid": "Invalid Id",
     "idnotfound": "ID cannot be found",
     "file": {

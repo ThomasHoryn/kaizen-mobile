@@ -1,8 +1,10 @@
 package com.kaizenmobile.web.rest;
 
 import com.kaizenmobile.domain.User;
+import com.kaizenmobile.repository.AppStatsRepository;
 import com.kaizenmobile.repository.UserRepository;
 import com.kaizenmobile.security.SecurityUtils;
+import com.kaizenmobile.service.AppStatsService;
 import com.kaizenmobile.service.MailService;
 import com.kaizenmobile.service.UserService;
 import com.kaizenmobile.service.dto.AdminUserDTO;
@@ -25,6 +27,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class AccountResource {
 
+    private final AppStatsService appStatsService;
+
     private static class AccountResourceException extends RuntimeException {
 
         private AccountResourceException(String message) {
@@ -40,10 +44,16 @@ public class AccountResource {
 
     private final MailService mailService;
 
-    public AccountResource(UserRepository userRepository, UserService userService, MailService mailService) {
+    public AccountResource(
+        UserRepository userRepository,
+        UserService userService,
+        MailService mailService,
+        AppStatsService appStatsService
+    ) {
         this.userRepository = userRepository;
         this.userService = userService;
         this.mailService = mailService;
+        this.appStatsService = appStatsService;
     }
 
     /**
@@ -53,12 +63,16 @@ public class AccountResource {
      * @throws InvalidPasswordException {@code 400 (Bad Request)} if the password is incorrect.
      * @throws EmailAlreadyUsedException {@code 400 (Bad Request)} if the email is already used.
      * @throws LoginAlreadyUsedException {@code 400 (Bad Request)} if the login is already used.
+     * @throws RuntimeException {@code 400 (Bad Request)} if the company is already used.
      */
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
     public void registerAccount(@Valid @RequestBody ManagedUserVM managedUserVM) {
         if (isPasswordLengthInvalid(managedUserVM.getPassword())) {
             throw new InvalidPasswordException();
+        }
+        if (appStatsService.isCompanyNameUsed(managedUserVM.getCompany())) {
+            throw new CompanyAlreadyUsedException();
         }
         User user = userService.registerUser(managedUserVM, managedUserVM.getPassword());
         mailService.sendActivationEmail(user);

@@ -10,7 +10,13 @@
           "required": "Ihr Benutzername wird benötigt.",
           "minlength": "Ihr Benutzername muss mindestens ein Zeichen lang sein.",
           "maxlength": "Ihr Benutzername darf nicht länger als 50 Zeichen sein.",
-          "pattern": "Ihr Benutzername ist ungültig."
+          "pattern": "Ihr Benutzername ist ungültig. Es kann nur Buchstaben, Zahlen, Punkte und Bindestriche enthalten."
+        },
+        "company": {
+          "required": "Der Name Ihres Unternehmens wird benötigt.",
+          "minlength": "Der Name Ihres Unternehmens muss mindestens ein Zeichen lang sein.",
+          "maxlength": "Der Name Ihres Unternehmens darf nicht länger als 254 Zeichen sein.",
+          "pattern": "Der Name Ihres Unternehmens ist ungültig. Es kann nur Buchstaben, Zahlen, Punkte und Bindestriche enthalten."
         }
       },
       "success": "<strong>Registrierung gespeichert!</strong> Bitte überprüfen Sie Ihre E-Mails für die Bestätigung.",

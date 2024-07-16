@@ -91,6 +91,10 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
             .getBody();
 
         if (
+            ex instanceof com.kaizenmobile.service.CompanyAlreadyUsedException
+        ) return (ProblemDetailWithCause) new CompanyAlreadyUsedException().getBody();
+
+        if (
             ex instanceof ErrorResponseException exp && exp.getBody() instanceof ProblemDetailWithCause problemDetailWithCause
         ) return problemDetailWithCause;
         return ProblemDetailWithCauseBuilder.instance().withStatus(toStatus(ex).value()).build();

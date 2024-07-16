@@ -3,6 +3,7 @@ package com.kaizenmobile.service;
 import com.kaizenmobile.config.Constants;
 import com.kaizenmobile.domain.Authority;
 import com.kaizenmobile.domain.User;
+import com.kaizenmobile.repository.AppStatsRepository;
 import com.kaizenmobile.repository.AuthorityRepository;
 import com.kaizenmobile.repository.UserRepository;
 import com.kaizenmobile.security.AuthoritiesConstants;
@@ -43,6 +44,7 @@ public class UserService {
 
     public UserService(
         UserRepository userRepository,
+        AppStatsRepository statsRepository,
         PasswordEncoder passwordEncoder,
         AuthorityRepository authorityRepository,
         CacheManager cacheManager
@@ -308,6 +310,7 @@ public class UserService {
 
     /**
      * Gets a list of all the authorities.
+     *
      * @return a list of all the authorities.
      */
     @Transactional(readOnly = true)

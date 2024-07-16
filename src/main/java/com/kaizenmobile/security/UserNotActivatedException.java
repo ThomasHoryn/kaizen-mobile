@@ -1,5 +1,6 @@
 package com.kaizenmobile.security;
 
+import com.kaizenmobile.web.rest.errors.ErrorConstants;
 import org.springframework.security.core.AuthenticationException;
 
 /**

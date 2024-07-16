@@ -10,7 +10,13 @@
           "required": "Your username is required.",
           "minlength": "Your username is required to be at least 1 character.",
           "maxlength": "Your username cannot be longer than 50 characters.",
-          "pattern": "Your username is invalid."
+          "pattern": "Your username is invalid. It can only contain letters, numbers, dots and dashes."
+        },
+        "company": {
+          "required": "Your company name is required.",
+          "minlength": "Your company name is required to be at least 1 character.",
+          "maxlength": "Your company name cannot be longer than 254 characters.",
+          "pattern": "Your company name is invalid. It can only contain letters, numbers, dots and dashes."
         }
       },
       "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",

@@ -139,6 +139,7 @@
     "idexists": "Un/a nuevo/a { entityName } no puede tener ID",
     "idnull": "ID inválido",
     "idinvalid": "ID inválido",
+    "companyexists": "¡El nombre de la empresa ya está en uso!",
     "idnotfound": "ID no encontrado",
     "file": {
       "could.not.extract": "No se pudo extraer el fichero",

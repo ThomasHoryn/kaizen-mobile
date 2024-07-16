@@ -139,6 +139,7 @@
     "idexists": "Nowy { entityName } nie może jeszcze mieć przypisanego ID",
     "idnull": "Brakujące ID",
     "idinvalid": "Niepoprawne ID",
+    "companyexists": "Nazwa firmy jest już używana!",
     "idnotfound": "ID nie może zostać znalezione",
     "file": {
       "could.not.extract": "Nie można wypakować pliku.",

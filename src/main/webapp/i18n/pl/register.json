@@ -10,14 +10,20 @@
           "required": "Twój login jest wymagany.",
           "minlength": "Twój login musi mieć długość co najmniej 1 znaku",
           "maxlength": "Twój login nie może być dłuższy niż 50 znaków",
-          "pattern": "Niewłaściwa nazwa użytkownika."
+          "pattern": "Niewłaściwa nazwa użytkownika. Może zawierać tylko litery, cyfry, kropki i myślniki."
+        },
+        "company": {
+          "required": "Nazwa Twojej firmy jest wymagana.",
+          "minlength": "Nazwa Twojej firmy musi mieć długość co najmniej 1 znaku",
+          "maxlength": "Nazwa Twojej firmy nie może być dłuższa niż 254 znaki",
+          "pattern": "Niewłaściwa nazwa firmy. Może zawierać tylko litery, cyfry, kropki i myślniki."
+        },
+        "success": "<strong>Rejestracja udała się!</strong> Wysłaliśmy do Ciebie email z linkiem do weryfikacji konta i prosimy abyś sprawdził swoją skrzynkę pocztową.",
+        "error": {
+          "fail": "<strong>Rejestracja nieudana!</strong> Prosimy spróbować później.",
+          "userexists": "<strong>Użytkownik z taką nazwą już istnieje!</strong> Prosimy wybrać inną nazwę.",
+          "emailexists": "<strong>Ten adres email jest już zarejestrowany!</strong> Prosimy wybrać inny adres."
         }
-      },
-      "success": "<strong>Rejestracja udała się!</strong> Wysłaliśmy do Ciebie email z linkiem do weryfikacji konta i prosimy abyś sprawdził swoją skrzynkę pocztową.",
-      "error": {
-        "fail": "<strong>Rejestracja nieudana!</strong> Prosimy spróbować później.",
-        "userexists": "<strong>Użytkownik z taką nazwą już istnieje!</strong> Prosimy wybrać inną nazwę.",
-        "emailexists": "<strong>Ten adres email jest już zarejestrowany!</strong> Prosimy wybrać inny adres."
       }
     }
   }

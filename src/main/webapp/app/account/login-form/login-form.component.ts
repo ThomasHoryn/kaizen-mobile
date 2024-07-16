@@ -4,11 +4,13 @@ import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import type AccountService from '../account.service';
 import type LoginService from '@/account/login.service';
+import { USER_NOT_ACTIVATED } from '@/constants';
 
 export default defineComponent({
   compatConfig: { MODE: 3 },
   setup() {
     const authenticationError: Ref<boolean> = ref(false);
+    const userNotActiveError: Ref<boolean> = ref(false);
     const login: Ref<string> = ref(null);
     const password: Ref<string> = ref(null);
     const rememberMe: Ref<boolean> = ref(false);
@@ -42,11 +44,16 @@ export default defineComponent({
         if (route.path === '/forbidden') {
           previousState();
         }
-      } catch (_error) {
-        authenticationError.value = true;
+      } catch (error) {
+        if (error.response.status === 500 && error.response.data.detail === USER_NOT_ACTIVATED) {
+          userNotActiveError.value = true;
+        } else {
+          authenticationError.value = true;
+        }
       }
     };
     return {
+      userNotActiveError,
       authenticationError,
       login,
       password,
