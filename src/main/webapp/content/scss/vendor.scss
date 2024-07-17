@@ -1,9 +1,11 @@
 /* after changing this file run 'npm run webapp:build' */
+@use 'sass:math';
+
 $btn-font-size-lg: 1.1rem;
 .btn-lg {
   font-size: $btn-font-size-lg !important;
   line-height: $btn-font-size-lg * 2 !important;
-  padding: $btn-font-size-lg/4 $btn-font-size-lg * 3 !important;
+  padding: math.div($btn-font-size-lg, 4) $btn-font-size-lg * 3 !important;
 }
 
 // Override Boostrap variables
